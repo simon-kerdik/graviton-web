@@ -55,7 +55,7 @@ const BaseLayout = ({ children }) => {
         >
           <nav className="flex flex-col pt-32 space-y-4">
             {navLinks.map(({ href, label }) => (
-              <Link href={href}>
+              <Link href={href} key={href}>
                 <a>{label}</a>
               </Link>
             ))}
