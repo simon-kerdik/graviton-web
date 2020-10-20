@@ -42,7 +42,9 @@ const BaseLayout = ({ children }) => {
             >
               <path
                 className="burger"
-                d={navIsOpen ? "M0,0 20,20 M0,20 20,0" : "M0,7 20,7 M0,13 20,13"}
+                d={
+                  navIsOpen ? "M0,0 20,20 M0,20 20,0" : "M0,7 20,7 M0,13 20,13"
+                }
               />
             </svg>
           </button>
