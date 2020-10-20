@@ -1,0 +1,23 @@
+{
+  "name": "graviton-web",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "latest",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-spring": "^8.0.27",
+    "typeface-roboto": "^1.1.13"
+  },
+  "devDependencies": {
+    "postcss-flexbugs-fixes": "4.2.1",
+    "postcss-preset-env": "^6.7.0",
+    "prettier": "^2.1.2",
+    "tailwindcss": "^1.7.4"
+  },
+  "license": "UNLICENSED"
+}
