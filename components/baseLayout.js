@@ -9,7 +9,7 @@ const navLinks = [
   { href: "/kontakt", label: "Kontakt" },
 ]
 
-const BaseLayout = ({ children }) => {
+const BaseLayout = ({ children, title }) => {
   const [navIsOpen, setNavIsOpen] = useState(false)
   const navSpring = useSpring({ height: navIsOpen ? "100%" : "0%" })
 
@@ -17,6 +17,7 @@ const BaseLayout = ({ children }) => {
     <>
       <Head>
         <link rel="icon" href="/favicon.svg" />
+        <title>{title ? `${title} | Graviton` : "Graviton"}</title>
       </Head>
       <div className="px-6 bg-white min-h-screen flex flex-col">
         <nav

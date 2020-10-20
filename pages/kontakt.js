@@ -1,9 +1,11 @@
 import BaseLayout from "../components/baseLayout"
 import React from "react"
 
+const title = "Kontakt"
+
 const KontaktPage = () => {
   return (
-    <BaseLayout>
+    <BaseLayout title={title}>
       <div className="mt-4 -mb-12 space-y-8">
         <h1 className="text-3xl text-graviton-blue">Kontakt</h1>
         <div className="flex">
