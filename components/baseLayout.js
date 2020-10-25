@@ -44,6 +44,7 @@ const BaseLayout = ({ children, title, description, navColor = "black" }) => {
           <button
             className={`ml-auto p-4 -m-4 md:hidden text-${navColor}`}
             onClick={() => setNavIsOpen(!navIsOpen)}
+            aria-label={navIsOpen ? "Zavrieť menu" : "Otvoriť menu"}
           >
             <svg
               viewBox="0 0 20 20"
