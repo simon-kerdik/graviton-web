@@ -58,8 +58,8 @@ const IndexPage = () => {
             </g>
           </svg>
           <h2 className="ml-12 font-light relative z-10">
-            Graviton je spoločnosť, ktorá navrhuje a vyrába inovatívne váhy
-            do každého prostredia.
+            Graviton je spoločnosť, ktorá navrhuje a vyrába elektronicko-strojné
+            konštrukcie pre váženie a meranie ďaľších fyzikálnych veličín.
           </h2>
         </div>
       </div>
@@ -134,7 +134,7 @@ const IndexPage = () => {
             </div>
             <div className="border-b border-r border-white p-6 md:p-8 md:pl-12 lg:pl-16 md:w-1/3">
               <h4>Expertíza</h4>
-              <div className="mt-4 text-blue-200">Realizovali sme</div>
+              <div className="mt-4 text-blue-200">Realizovali sme viac než</div>
               <span className="text-6xl font-thin leading-tight">1500</span>
               <div>projektov</div>
             </div>
