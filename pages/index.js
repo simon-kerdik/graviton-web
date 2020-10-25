@@ -63,33 +63,66 @@ const IndexPage = () => {
           </h2>
         </div>
       </div>
-      <div className="space-y-12 mt-12 container mx-auto">
-        <div className="px-6 flex flex-wrap">
-          <div className="w-1/2"> </div>
-          <div className="space-y-3 lg:w-1/2">
-            <h3 className="text-2xl font-light">Váhy na mieru</h3>
+      <div className="grid md:grid-cols-2 font-light text-xl lg:text-2xl bg-gray-100">
+        <picture>
+          <source
+            srcSet="/vahy_768.webp"
+            type="image/webp"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcSet="/vahy_768.jpg"
+            type="image/jpeg"
+            media="(min-width: 768px)"
+          />
+          <source srcSet="/vahy.webp" type="image/webp" />
+          <source srcSet="/vahy.jpeg" type="image/jpeg" />
+          <img src="/vahy.jpg" alt="Váhy" className="w-full" loading="lazy" />
+        </picture>
+        <div className="flex flex-col items-center justify-center">
+          <div className="max-w-lg p-12">
+            <h3 className="text-3xl lg:text-4xl font-light mb-2">
+              Váhy na mieru
+            </h3>
             <p>
-              Špecializujeme sa na komplexné zadania, pre ktoré váhy zo sériovej
+              Špecializujeme sa na komplexné zadania, pre ktoré váhy zo sériovej
               výroby nestačia.
             </p>
-            <p>
-              Naše váhy vážia v betonárňach, na výrobných linkách, pri ťažbe
-              dreva, štrku, siláži, mletí múky, výrobe syra…
-            </p>
           </div>
-          <div className="space-y-3 lg:w-1/2">
-            <h3 className="text-2xl font-light">Spoľahlivosť</h3>
+        </div>
+        <div className="flex flex-col items-center justify-center order-2 md:order-none">
+          <div className="max-w-lg p-12">
+            <h3 className="text-3xl lg:text-4xl font-light mb-2">
+              Spoľahlivosť
+            </h3>
             <p>
               Naše konštrukčné riešenia umožňujú prevádzku v náročných
-              podmienkach.
-            </p>
-            <p>
-              Používame kvalitné komponenty s minimálnými nárokmi na údržbu.
+              podmienkach s minimálnými nárokmi na údržbu.
             </p>
           </div>
-          <div className="w-1/2"> </div>
         </div>
-
+        <picture>
+          <source
+            srcSet="/farbenie_betonu_768.webp"
+            type="image/webp"
+            media="(min-width: 768px)"
+          />
+          <source
+            srcSet="/farbenie_betonu_768.jpg"
+            type="image/jpeg"
+            media="(min-width: 768px)"
+          />
+          <source srcSet="/farbenie_betonu.webp" type="image/webp" />
+          <source srcSet="/farbenie_betonu.jpeg" type="image/jpeg" />
+          <img
+            src="/farbenie_betonu.jpg"
+            alt="Váženie farieb do betónu"
+            className="w-full order-1"
+            loading="lazy"
+          />
+        </picture>
+      </div>
+      <div className="space-y-12 mt-12 container mx-auto">
         <div className="space-y-2 px-6">
           <h3 className="ml-6 md:ml-12 lg:ml-16">Graviton v číslach</h3>
           <div className="bg-graviton-blue text-white flex flex-col md:flex-row">
@@ -114,6 +147,16 @@ const IndexPage = () => {
           </div>
         </div>
       </div>
+      <picture>
+        <source srcSet="/skica.webp" type="image/webp" />
+        <source srcSet="/skica.jpg" type="image/jpeg" />
+        <img
+          src="/skica.jpg"
+          alt="Skica"
+          className="w-full mt-12"
+          loading="lazy"
+        />
+      </picture>
     </BaseLayout>
   )
 }
