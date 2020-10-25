@@ -7,8 +7,12 @@ const IndexPage = () => {
 
   const navColor = coverIsInView ? "white" : "black"
 
+  const description =
+    "Graviton je spoločnosť, ktorá navrhuje a vyrába elektronicko-strojné " +
+    "konštrukcie pre váženie a meranie ďaľších fyzikálnych veličín."
+
   return (
-    <BaseLayout navColor={navColor}>
+    <BaseLayout navColor={navColor} description={description}>
       <div
         className="flex flex-wrap-reverse lg:flex-no-wrap lg:h-screen"
         ref={coverRef}

@@ -6,7 +6,7 @@ import Head from "next/head"
 
 const navLinks = [{ href: "/kontakt", label: "Kontakt" }]
 
-const BaseLayout = ({ children, title, navColor = "black" }) => {
+const BaseLayout = ({ children, title, description, navColor = "black" }) => {
   const [navIsOpen, setNavIsOpen] = useState(false)
   const navSpring = useSpring({ height: navIsOpen ? "100%" : "0%" })
 
@@ -18,6 +18,7 @@ const BaseLayout = ({ children, title, navColor = "black" }) => {
     <>
       <Head>
         <link rel="icon" href="/favicon.svg" />
+        <meta name="description" content={description} />
         <title>{title ? `${title} | Graviton` : "Graviton"}</title>
       </Head>
       <div className="bg-white min-h-screen flex flex-col">

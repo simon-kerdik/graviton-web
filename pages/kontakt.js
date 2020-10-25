@@ -2,10 +2,11 @@ import BaseLayout from "../components/baseLayout"
 import React from "react"
 
 const title = "Kontakt"
+const description = "Kontaktujte nás a vyžiadajte si ponuku na naše služby."
 
 const KontaktPage = () => {
   return (
-    <BaseLayout title={title}>
+    <BaseLayout title={title} description={description}>
       <div className="container mx-auto px-6 space-y-6 md:space-y-8 mt-24 lg:mt-32">
         <h1 className="text-3xl md:text-4xl lg:text-5xl text-graviton-blue">
           Kontakt
