@@ -4,10 +4,7 @@ import Link from "next/link"
 import { GravitonLogo } from "./gravitonLogo"
 import Head from "next/head"
 
-const navLinks = [
-  { href: "/", label: "O nás" },
-  { href: "/kontakt", label: "Kontakt" },
-]
+const navLinks = [{ href: "/kontakt", label: "Kontakt" }]
 
 const BaseLayout = ({ children, title, navColor = "black" }) => {
   const [navIsOpen, setNavIsOpen] = useState(false)
