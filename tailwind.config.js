@@ -11,6 +11,12 @@ module.exports = {
       colors: {
         "graviton-blue": "#0c8ed1",
       },
+      fontSize: {
+        "7xl": "5rem",
+      },
+      minHeight: {
+        "1/2-screen": "50vh",
+      },
     },
     fontFamily: {
       sans: ["Roboto", ...defaultTheme.fontFamily.sans],

@@ -1,20 +1,50 @@
 import React from "react"
 import BaseLayout from "../components/baseLayout"
+import { useInView } from "react-intersection-observer"
 
 const IndexPage = () => {
+  const [coverRef, coverIsInView] = useInView()
+
+  const navColor = coverIsInView ? "white" : "black"
+
   return (
-    <BaseLayout>
-      <div className="space-y-12">
-        <h1 className="text-4xl font-bold text-graviton-blue leading-tight uppercase pt-16 pb-6">
-          Vývoj a výroba vážiacich systémov
-        </h1>
-        <div className="-mx-6 py-20 px-6 bg-gray-100">
+    <BaseLayout navColor={navColor}>
+      <div
+        className="flex flex-wrap-reverse lg:flex-no-wrap lg:h-screen"
+        ref={coverRef}
+      >
+        <div className="relative w-full lg:w-1/2">
+          <picture>
+            <source srcSet="/snimac_sily.webp" type="image/webp" />
+            <source srcSet="/snimac_sily.jpg" type="image/jpeg" />
+            <img
+              src="/snimac_sily.jpg"
+              alt="Snímač sily"
+              className="w-full h-full object-cover object-bottom"
+            />
+          </picture>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-tr from-purple-700 via-blue-400 to-pink-700 opacity-75">
+            {" "}
+          </div>
+        </div>
+        <div className="w-full lg:w-1/2 bg-gray-900 flex items-center lg:justify-center">
+          <h1 className="text-white text-4xl sm:text-6xl lg:text-7xl leading-tight font-light uppercase px-8 pt-40 pb-16 lg:p-20 pb-6 z-10">
+            Vývoj a výroba
+            <br />
+            vážiacich
+            <br />
+            systémov
+          </h1>
+        </div>
+      </div>
+      <div className="bg-gray-100">
+        <div className="md:w-8/12 xl:w-5/12 mx-auto py-20 lg:py-64 text-3xl sm:text-4xl lg:text-5xl">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 100 91.148387"
-            width="6em"
-            height="6em"
-            className="text-blue-200 absolute z-0 -mt-8"
+            width="3em"
+            height="3em"
+            className="text-blue-100 absolute z-0 -mt-6 ml-4 lg:ml-0 lg:-mt-10"
           >
             <g transform="matrix(1.3333,0,0,-1.3333,-151.17355,423.51875)">
               <g clipPath="M 0,566.93 H 566.93 V 0 H 0 Z">
@@ -27,14 +57,17 @@ const IndexPage = () => {
               </g>
             </g>
           </svg>
-          <p className="ml-8 text-3xl font-light relative z-10">
-            Graviton je spoločnosť vyrábajúca inovatívne váhy do každého
-            prostredia.
-          </p>
+          <h2 className="ml-12 font-light relative z-10">
+            Graviton je spoločnosť, ktorá navrhuje a vyrába inovatívne váhy
+            do každého prostredia.
+          </h2>
         </div>
-        <div className="space-y-8">
-          <div className="space-y-3">
-            <h2 className="text-2xl font-light">Váhy na mieru</h2>
+      </div>
+      <div className="space-y-12 mt-12 container mx-auto">
+        <div className="px-6 flex flex-wrap">
+          <div className="w-1/2"> </div>
+          <div className="space-y-3 lg:w-1/2">
+            <h3 className="text-2xl font-light">Váhy na mieru</h3>
             <p>
               Špecializujeme sa na komplexné zadania, pre ktoré váhy zo sériovej
               výroby nestačia.
@@ -44,8 +77,8 @@ const IndexPage = () => {
               dreva, štrku, siláži, mletí múky, výrobe syra…
             </p>
           </div>
-          <div className="space-y-3">
-            <h2 className="text-2xl font-light">Spoľahlivosť</h2>
+          <div className="space-y-3 lg:w-1/2">
+            <h3 className="text-2xl font-light">Spoľahlivosť</h3>
             <p>
               Naše konštrukčné riešenia umožňujú prevádzku v náročných
               podmienkach.
@@ -54,24 +87,25 @@ const IndexPage = () => {
               Používame kvalitné komponenty s minimálnými nárokmi na údržbu.
             </p>
           </div>
+          <div className="w-1/2"> </div>
         </div>
 
-        <div className="space-y-2">
-          <h3>Graviton v číslach</h3>
-          <div className="bg-blue-900 text-white">
-            <div className="border-b border-white p-4">
-              <h4>Skúsenosti</h4>
+        <div className="space-y-2 px-6">
+          <h3 className="ml-6 md:ml-12 lg:ml-16">Graviton v číslach</h3>
+          <div className="bg-graviton-blue text-white flex flex-col md:flex-row">
+            <div className="border-b border-r border-white p-6 md:p-8 md:pl-12 lg:pl-16 md:w-1/3">
+              <h4>Znalosti</h4>
               <div className="mt-4 text-blue-200">Máme</div>
               <span className="text-6xl font-thin leading-tight">30</span>
-              <div className="mt-0">rokov znalostí</div>
+              <div className="mt-0">rokov skúseností</div>
             </div>
-            <div className="border-b border-white p-4">
+            <div className="border-b border-r border-white p-6 md:p-8 md:pl-12 lg:pl-16 md:w-1/3">
               <h4>Expertíza</h4>
               <div className="mt-4 text-blue-200">Realizovali sme</div>
               <span className="text-6xl font-thin leading-tight">1500</span>
               <div>projektov</div>
             </div>
-            <div className="border-b border-white p-4">
+            <div className="border-b border-white p-6 md:p-8 md:pl-12 lg:pl-16 md:w-1/3">
               <h4>Inovácia</h4>
               <div className="mt-4 text-blue-200">Vyvinuli sme</div>
               <span className="text-6xl font-thin leading-tight">17</span>
