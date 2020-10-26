@@ -34,9 +34,9 @@ const KontaktPage = () => {
           <div className="space-y-2">
             <h2 className="font-light text-lg">Vedenie spoločnosti</h2>
             <div>
-              Jozef Kerdík
+              Ing. Jozef Kerdík
               <br />
-              Jakub Koščák
+              Ing. Jakub Koščák
             </div>
           </div>
           <div className="space-y-2">
