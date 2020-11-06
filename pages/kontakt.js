@@ -111,7 +111,7 @@ const KontaktPage = () => {
         frameBorder="0"
         aria-hidden="false"
         tabIndex="0"
-        className="w-screen min-h-1/2-screen mt-8 lg:mt-16 -mb-12 hidden sm:block"
+        className="w-full min-h-1/2-screen mt-8 lg:mt-16 -mb-12 hidden sm:block"
       />
     </BaseLayout>
   )
