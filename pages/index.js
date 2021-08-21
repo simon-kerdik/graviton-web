@@ -157,7 +157,7 @@ const IndexPage = () => {
         <img
           src="/skica.jpg"
           alt="Skica"
-          className="w-full mt-12"
+          className="w-full container mx-auto mt-12"
           loading="lazy"
         />
       </picture>
