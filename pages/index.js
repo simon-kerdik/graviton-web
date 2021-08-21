@@ -32,12 +32,15 @@ const IndexPage = () => {
           </div>
         </div>
         <div className="w-full lg:w-1/2 bg-gray-900 flex items-center lg:justify-center">
-          <h1 className="text-white text-4xl sm:text-6xl lg:text-7xl leading-tight font-light uppercase px-8 pt-40 pb-16 lg:p-20 pb-6 z-10">
+          <h1 className="text-white text-4xl sm:text-6xl leading-tight font-light uppercase px-8 pt-40 pb-16 lg:p-20 pb-6 z-10">
             Vývoj a výroba
             <br />
             vážiacich
             <br />
             systémov
+            <br />
+            <br />
+            Priemyselné automatické linky
           </h1>
         </div>
       </div>
